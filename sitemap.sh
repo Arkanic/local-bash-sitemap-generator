@@ -1,4 +1,4 @@
-url="www.example.com"
+url="https://www.example.com"
 find . -type f -not -path "./.git/*" > sitemap-temp.txt
 stdbuf -o0 cut -c2- sitemap-temp.txt > sitemap-temp2.txt
 for i in $(cat sitemap-temp2.txt); do echo "$url$i"; done > sitemap-temp3.txt
